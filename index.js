@@ -8,10 +8,9 @@ const app = express()
 const PORT = 8000
 
 app.use(express.urlencoded({extended:false}));
-app.set('view engine', 'ejs');
 
 app.get('/',(req,res) =>{
-    return res.render('home');
+    return res.send('<h1>Hello World </h1>')
 });
 
 app.listen(PORT,() => console.log('server is running at port',PORT));
